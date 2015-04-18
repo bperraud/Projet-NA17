@@ -1,0 +1,60 @@
+----------------------------------------------Gestion des Utilisateurs et des droits------------------------------------
+
+User(
+#login: string, firstName: string, lastName: string, password: string, birthDate: Date, creator => User(login)
+) WITH password NOT NULL, creator NOT NULL
+
+Droit_User(
+#login_utilisateur => User, #droit : {administrateur, redacteur, editeur, moderateur}
+)
+-------------------------------------------------Gestion des articles et rubriques---------------------------------------
+
+Article(
+#id: int, honor : bool = false, date : Date, author => User, statusRedacteur : {en_redaction, soumis, supprime}, statusEditeur => Statut_editeur_article, 
+) WITH creationDate, author NOT NULL
+
+Statut_editeur_article(
+#article => Article, #date : Date, status : {en relecture, rejete, a_reviser, valide, publie}, justifications_preconisations : text, editor => User
+) WITH status, editor NOT NULL
+
+Tie_article(
+#firstArticle => Article(id), #secondArticle => Article(id)
+)
+
+Tags(
+#id=>Article, #word: string
+)
+
+Rubrique(
+#title: string, mother => Rubrique, creator => User, date  : Date
+) WITH creator, date  NOT NULL
+
+Rubriques_articles(
+#rubrique => Rubrique(titre), #id_art => Article, editor => User, date : Date
+) WITH editor, date NOT NULL
+
+-----------------------------------------------Gestion des blocs------------------------------------------------------
+
+Bloc_txt(
+#id_art=>Article, #order :int, #title: string, texte: text
+) WITH texte NOT NULL
+
+Bloc_img(
+#id_art=>Article, #order : int, #title: string, path: string
+) WITH path NOT NULL
+
+Contrainte : PROJ(Article, id) IN UNION(PROJ(Bloc_txt, id_art), PROJ(Bloc_img, id_art))
+
+-----------------------------------------------Gestion des commentaires et des notes------------------------------
+
+Note(
+#login=>User, #id_art=>Article, note: int)
+) WITH note NOT NULL
+
+Commentaire(
+#id: int, creator=>User, id_art=>Article, date : Date, texte : text, status => Statut_commentaire
+) WITH creator, id_art, text NOT NULL
+
+Statut_commentaire(
+#commentaire => Commentaire, #date : Date, statut : {visible, masque, supprime, exergue}, user => User
+) WITH statut, user NOT NULL
