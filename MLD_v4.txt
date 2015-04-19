@@ -11,7 +11,7 @@ Droit_User(
 
 Article(
 #titre: string, honor : bool = false, date : Date, author => User, statusRedacteur : {en_redaction, soumis, supprime}, statusEditeur => Statut_editeur_article, 
-) WITH creationDate, author NOT NULL
+) WITH creationDate, statusRedacteur, author NOT NULL
 
 Statut_editeur_article(
 #article => Article, #date : Date, status : {en relecture, rejete, a_reviser, valide, publie}, justifications_preconisations : text, editor => User
