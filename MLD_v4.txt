@@ -14,8 +14,8 @@ Article(
 ) WITH creationDate, statusRedacteur, author NOT NULL
 
 Statut_editeur_article(
-#article => Article, #date : Date, status : {en relecture, rejete, a_reviser, valide, publie}, justifications_preconisations : text, editor => User
-) WITH status, editor NOT NULL
+#id : int, article => Article, date : Date, status : {en relecture, rejete, a_reviser, valide, publie}, justifications_preconisations : text, editor => User
+) WITH (article, date) KEY AND status, editor NOT NULL
 
 Tie_article(
 #firstArticle => Article(id), #secondArticle => Article(id)
@@ -56,5 +56,5 @@ Commentaire(
 ) WITH creator, id_art, text NOT NULL
 
 Statut_commentaire(
-#commentaire => Commentaire, #date : Date, statut : {visible, masque, supprime, exergue}, user => User
-) WITH statut, user NOT NULL
+#id : int, commentaire => Commentaire, date : Date, statut : {visible, masque, supprime, exergue}, user => User
+) WITH (commentaire, date) KEY AND statut, user NOT NULL
