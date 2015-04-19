@@ -10,7 +10,7 @@ Droit_User(
 -------------------------------------------------Gestion des articles et rubriques---------------------------------------
 
 Article(
-#id: int, honor : bool = false, date : Date, author => User, statusRedacteur : {en_redaction, soumis, supprime}, statusEditeur => Statut_editeur_article, 
+#titre: string, honor : bool = false, date : Date, author => User, statusRedacteur : {en_redaction, soumis, supprime}, statusEditeur => Statut_editeur_article, 
 ) WITH creationDate, author NOT NULL
 
 Statut_editeur_article(
