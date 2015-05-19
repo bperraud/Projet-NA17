@@ -1,0 +1,17 @@
+Modification de l'association "Masque" : Passage en N:M pour historisation des masquage. 
+Ajout de l'association N:M "met en avant" : historisation des mises en exergue
+
+Modifications qui devraient résoudre le problème d'historisations des actions. 
+Deux tables de notre BD contiendront les masquage et mise en exergue des commentaires. 
+Restriction sur les attributs masqué et en_avant, un commentaire ne peut être mit en avant et masqué, et inversement. 
+
+Ajout de la classe Note. Un lecteur attribue des notes à des articles. Une note concerne un seul article et est attribué par un seul lecteur. 
+Composition Note-Article, la suppression de l'article entraine la suppression de ses notes. 
+
+
+Modifications de l'association posséde entre Article et statut éditeur : Un article possède un seul statut éditeur mais un statut peut être attribué à plusieurs article. 
+Suppression de la possibilité de mettre un statut en rédaction ou soumis : Le statut à réviser entraine le statut en rédaction de l'article, statut soumis attribué par le lecteur.
+statut rejeté entraine la suppression de l'article(bool delete true) 
+(Je n'ai pas trouvé de sens à ce qu'un éditeur puisse mettre le statut soumis à un article, bien que ce soit indiqué dans le sujet)
+Ajout d'une classe d'association entre Article et Statut éditeur pour ajout de préconisations et justifications selon les status attribués : toujours dans un soucis d'historisation des actions. Voir MLD
+Un article n'a pas de statut editor tant qu'il n'as pas le statut "soumis" et qu'un editeur ne l'a pas pris en charge. 

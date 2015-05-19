@@ -1,0 +1,72 @@
+Utilisateur (
+#login: string, nom: string, prenom: string, mdp: string, date_nais: Date, droits: int(4)
+) with mdp NOT NULL, (nom, prenom) KEY (je supppose)
+
+/*L'heritage etant complet, je suggere de le traduire par la classe mere utilisateur. Puisqu'on peut considerer que les
+classes filles ne sont pas mutuellement exclusifs mais plutôt hierarchiques, voici ce que je propose :
+1) on est administrateur, ou on ne l'est pas : premier digit 1 ou 0;
+2) idem pour moderateur,
+3) idem pour redacteur,
+4) idem pour editeur,
+5) on est lecteur par defaut (si  on est enregistre dans la BDD, c'est bien qu'on a un compte).
+Ce qui nous donne un code en binaire comme par exemple 1000 (seulement admin), 11 (redac + edit) ou encore 101 (mod +
+edit).
+*/
+
+Article (
+#id: int, honneur: bool = false, archive: bool = false, date_crea: Date
+) with date_crea, NOT NULL
+
+/*Alors, peut-etre que je reve et que je suis pas du tout concentre, mais il me semble qu'ils ont MAJ le sujet entre
+temps... Donc apparemment les lecteurs peuvent aussi noter les articles, d'ou le rajout d'une table Note...
+A part ca, ils ont encore modifie les conneries de statuts, alors j'en ai marre la classe enum de statuts redac ne
+fonctionne plus, enfin bon faut que vous me disiez ce que vous en pensez...*/
+
+Note (
+#login=>Utilisateur, #id_art=>Article, note: int)
+) with note <= 5
+
+/*Concernant la normalisation, si l'on garde tags en multivalue (par exemple en tant que chaîne formatee de type <tag1,
+tag2,..., tagn> (avec ',' comme separateur) on en sera pas en 1NF, donc autant creer une table Tags :
+
+Tags (
+#id=>Article, #mot: string
+)
+
+Bloc_txt (
+#id_art=>Article, #titre: string, texte: string
+) with texte NOT NULL
+
+Bloc_img (
+#id_art=>Article, #titre: string, chemin: string
+) with chemin NOT NULL
+
+Contrainte : PROJ(Article, id) IN PROJ(UNION(PROJ(Bloc_txt, id_art), PROJ(Bloc_img, id_art)), id_art)
+
+Rubrique (
+#id: int, id_art=>Article, titre: string
+) with (id_art, titre) KEY and NOT NULL
+
+/*Je ne saisis pas l'attribut contenu de Rubrique, sachant qu'il est absent du sujet actuel, je suggere donc qu'on le
+retire. Pour traduire la relation reflexive et recursive de possession (rubriques, sous-rubriques, etc.), nouvelle table.
+Je propose du coup de creer une cle artificielle pour eviter de faire plein de cles etrangeres dans cette autre table.*/
+
+Rubrique_tree (
+#mere=>Rubrique, #fille=>Rubrique
+) with fille != mere
+
+Commentaire (
+#id: int, login=>Utilisateur, id_art=>Article, date_crea: Date, texte: string, statut: int(1)
+) with statut<4
+
+/*On peut creer une cle artificielle pour Commentaire, plus simple. Je suggere qu'on regroupe archive, masque, en avant
+et le statut par defaut (visible) en un seul attribut, statut de type int qui est d'autant plus haut que le commentaire
+est visible : 0 archive/supprime, 1 masque, 2 visible et 3 exergue.*/
+
+Historique (
+#id: int, date: Date, login=>Utilisateur, rang: ('redac', 'mod', 'edit'), type: ('art', 'com'), id_obj: int, action:
+string
+) with (date, login, rang, type, id_obj, action) NOT NULL, PROJ(Historique, id_obj) IN PROJ(UNION(PROJ(Article, id),
+PROJ(Commentaire, id)), id)
+
+/*Meme principe pour action, on peut s'amuser a recenser toutes les actions possibles...*/
