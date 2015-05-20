@@ -10,4 +10,3 @@ function verifier_arguments($array){
 	}
 	return $erreur;
 }
-?>
