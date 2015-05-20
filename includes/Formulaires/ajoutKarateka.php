@@ -1,4 +1,4 @@
-	<form method="POST" action="ajout_Karateka.php">
+	<form method="POST" action="ajoutPersonne.php">
 		<fieldset>
 			<legend>Information Générales</legend>
 			<label for="nom">Nom *:</label>
