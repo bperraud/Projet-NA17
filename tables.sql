@@ -1,4 +1,5 @@
-/* Drop pour clean la BDD
+/* Baptiste modif id pour l'auto increment
+ * Drop pour clean la BDD
  * correction de bugs de syntaxe + clés
  */
 
@@ -34,12 +35,12 @@ CREATE TABLE PERSON(
     Id INTEGER PRIMARY KEY,
     FirstName VARCHAR,
     LastName VARCHAR,
-    Mail VARCHAR UNIQUE,
-    Phone VARCHAR UNIQUE
 );
 
 CREATE TABLE LEADER(
-    Id INTEGER REFERENCES PERSON(Id) PRIMARY KEY
+    Id INTEGER REFERENCES PERSON(Id) PRIMARY KEY,
+    Mail VARCHAR UNIQUE,
+    Phone VARCHAR UNIQUE
 );
 
 CREATE TABLE CLUB(
