@@ -5,6 +5,10 @@
 ## En cours
 
 * Création des Tables SQL
+* Implémenter fonctionnalitées de créations d'entitées (Marie)
+	* Création de karatékas
+	* Création de club
+	* création de compétition
 
 ## Todos non assignés
 
