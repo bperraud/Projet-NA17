@@ -2,28 +2,25 @@
 
 ## Notes & co
 
-## En cours
+## Done
 
 * Création des Tables SQL
-* Implémenter fonctionnalitées de créations d'entitées (Marie)
+
+## En cours
+
+* Implémenter fonctionnalités de créations d'entités (Marie)
 	* Création de karatékas
 	* Création de club
 	* création de compétition
+* Gestion des clubs & compétitions (Baptiste)
+	* Inscription des karatékas à un club
+	* Inscription des karatékas à une compétition
 
 ## Todos non assignés
 
-* Fonction d'import des Katas depuis un fichier CSV ou XML
+* Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible)
 	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 	* Page PHP correspondante
-
-* Implémenter fonctionnalitées de créations d'entitées
-	* Création de karatékas
-	* Création de club
-	* création de compétition
-
-* Gestion des clubs & compétitions
-	* Inscription des karatékas à un club
-	* Inscription des karatékas à une compétition
 
 * Gestion des résultats de confrontations
 	* création de confrontations
