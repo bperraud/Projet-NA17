@@ -17,7 +17,7 @@
 				<li><a href="import.php">Impoter un fichier CSV</a> </li>
 				<li><a href="ajoutPersonne.php">Ajouter une Personne</a></li>
 				<li><a href="ajoutClub.php">Ajouter un club</a></li>
-				<li><a href="ajoutCompetion.php">Ajouter une compétition</a></li>
+				<li><a href="ajoutCompetition.php">Ajouter une compétition</a></li>
 				<li>etc.</li>
 			</ul>
 		</nav>

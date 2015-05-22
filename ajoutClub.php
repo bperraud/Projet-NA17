@@ -10,6 +10,7 @@ include 'includes/header.php' ;
 if(!isset($_POST['name']) || !isset($_POST['website']) || !isset($_POST['leader']) ){
 	include 'includes/Formulaires/ajoutClub.php';
 } else {
+	
 	echo "insertion club... ";
 	$vConnect = Connect();
 	if ( !pg_insert( $vConnect, 'club', $_POST) ) {
