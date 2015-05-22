@@ -1,22 +1,37 @@
-<!-- En attendant les bases SQL, un formulaire qu'on aura forcément à réutiliser après ^^ -->
+<form method = "POST" action="ajoutClub.php">
+	<label for="name">Nom * :</label>
+	<input type="text" name="name" id="name" required>
 
-<form action="BLABLA.php">
-	<label for="nom">Nom * :</label>
-	<input type="text" name="nom" id="nom" required>
+	<label for="website">Site Web *:</label>
+	<input type="url" name="website" id="website" required>
 
-	<label for="site_web">Site Web *:</label>
-	<input type="url" name="site_web" id="site_web" required>
-
-	<label for="dirigeant">Dirigeant</label><select name="dirigeant" id="dirigeant">
+	<label for="leader">Dirigeant</label><select name="leader" id="leader">
 		<?php
-			//requête SQL pour choper la liste des dirigeants
-			//while truc
-			//<option value="ID_dirigeant"> NOM Dirigeant </option>
+		$vConnect = Connect();
+		/*$dirigeants = pg_select ( $vConnect, 'vleader', ['id'=>'', 'firstname'=>'', 'lastname'=>'']);
+		echo "result sql : " . $dirigeants ;
+		echo "<pre>";
+		print_r($dirigeants);
+		echo "</pre>";
+		foreach ($dirigeants as $dirigeant ) {
+			// <option value="ID_dirigeant"> NOM Dirigeant </option>
+			echo '<option value="'.$dirigeant['id'].'">'.$dirigeant['firstname'].' '.$dirigeant['lastname'].'</option>';
+		}*/
+		
+		$request = pg_query('SELECT id, firstname, lastname
+							FROM vleader ');
+		if(!$request){
+			echo "Erreur select" . pg_last_error() ;
+			exit();
+		}
+		while( $dirigeant = pg_fetch_array($request,null,PGSQL_ASSOC) ){
+			// <option value="ID_dirigeant"> NOM Dirigeant </option>
+			echo '<option value="'.$dirigeant['id'].'">'.$dirigeant['firstname'].' '.$dirigeant['lastname'].'</option>';
+		}
+
+		pg_close($vConnect);
 		?>
-		<option value="ID_dirigeant"> NOM Dirigeant </option>
-		<option value="ID_dirigeant"> NOM Dirigeant </option>
-		<option value="ID_dirigeant"> NOM Dirigeant </option>
-	</select>
+		</select>
 
 	<input type="submit" value="Envoyer" />
 </form>

@@ -105,6 +105,7 @@ if(!isset($_POST['nom']) && !isset($_POST['prenom'])){
 			}
 			echo "ok ! <br />" ;
 		}
+		pg_close($vConnect);
 	}
 
 }
