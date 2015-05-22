@@ -9,11 +9,12 @@
 	* Création de karatékas
 	* Création de club
 	* création de compétition
+* Gestion des clubs & compétitions
+	* Inscription des karatékas à un club
 
 ## En cours
 
 * Gestion des clubs & compétitions (Baptiste)
-	* Inscription des karatékas à un club
 	* Inscription des karatékas à une compétition
 * Gestion des résultats de confrontations (Marie)
 	* création de confrontations
