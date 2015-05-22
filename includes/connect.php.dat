@@ -1,10 +1,14 @@
 <?php
+/*
+fichier à copier, modifier selon vos identifiants, puis renommer sous connect.php
+*/
+
 function Connect(){
 	$vHost="localhost";
 	$vPort="5432";
-	$vDbname="p15_na17";
-	$vUser="tamica";
-	$vPassword="NamEjax9";
+	$vDbname="database";
+	$vUser="username";
+	$vPassword="password";
 	$vConn = pg_connect("host=$vHost port=$vPort dbname=$vDbname user=$vUser password=$vPassword");
 	return $vConn;
 }
