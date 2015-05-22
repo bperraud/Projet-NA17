@@ -1,4 +1,4 @@
-	<form method="POST" action="ajoutPersonne.php">
+	<form enctype="multipart/form-data" method="POST" action="ajoutPersonne.php">
 		<fieldset>
 			<legend>Information Générales</legend>
 			<label for="nom">Nom *:</label>
@@ -23,12 +23,12 @@
 
 			<label for="ceinture">Ceinture *:</label>
 			<select name="ceinture" id="ceinture">
-				<option value="jaune">Jaune</option>
+				<option value="yellow">Jaune</option>
 				<option value="orange">Orange</option>
-				<option value="verte">Verte</option>
-				<option value="bleue">Bleue</option>
-				<option value="marron">Marron</option>
-				<option value="noire">Noire</option>
+				<option value="green">Verte</option>
+				<option value="blue">Bleue</option>
+				<option value="brown">Marron</option>
+				<option value="black">Noire</option>
 			</select>
 
 			<label for="dans">Dans (* si Ceinture Noire) :</label>

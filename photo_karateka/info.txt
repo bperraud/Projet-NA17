@@ -1,0 +1,1 @@
+Dans ce dossier seront placés les photos du karatéka. Pour que cela fonctionne, il faut que le dossier aie les bonnes permissions !
