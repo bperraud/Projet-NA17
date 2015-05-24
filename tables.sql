@@ -104,7 +104,7 @@ NumberMov INTEGER,
 Belt VARCHAR,
 Dans INTEGER,
 Family VARCHAR REFERENCES KATAFAMILY(NameJ) NOT NULL,
-CHECK(Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt =   'brown' OR Belt = 'black')
+CHECK(Belt = 'white' OR Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt = 'brown' OR Belt = 'black')
 );
 
 
