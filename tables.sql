@@ -61,7 +61,7 @@ CREATE TABLE KARATEKA(
 	Dans INTEGER,
 	ClubName VARCHAR REFERENCES CLUB(Name),
 	Teacher BOOLEAN,
-	CHECK(Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt =   'brown' OR Belt = 'black')
+	CHECK(Belt = 'white' OR Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt = 'brown' OR Belt = 'black')
 );
 
 CREATE VIEW VKARATEKA AS
