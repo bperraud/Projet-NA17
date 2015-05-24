@@ -7,6 +7,14 @@ if(empty($_POST))
 	include 'includes/Formulaires/inscriptionClubForm.php';
 
 else{
+	if (empty($_POST['karateka'])){
+		echo "karateka non fourni...";
+		exit();
+	}
+	if (empty($_POST['club'])){
+		echo "club non fourni...";
+		exit();
+	}
 	$karateka = $_POST['karateka'];
 	$club = $_POST['club'];
 	echo "inscription d'un karatéka...";

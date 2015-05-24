@@ -1,14 +1,14 @@
-<form method="post" action="inscriptionClub.php">
+<form method="post" action="inscriptionCompetition.php">
 
 	<?php
 		$vConnect = Connect();
-		$requestkarateka = "SELECT id, firstname, lastname FROM person NATURAL JOIN karateka WHERE clubname IS NULL;";
-		$requestclub = "SELECT name FROM club;";
+		$requestkarateka = "SELECT id, firstname, lastname FROM person NATURAL JOIN karateka;";
+		$requestcompetition = "SELECT id, name FROM competition;";
 		if( !($resultkarateka = pg_query($vConnect, $requestkarateka)) ) {
 			echo pg_last_error() ;
 			exit();
 		}
-		if( !($resultclub = pg_query($vConnect, $requestclub)) ) {
+		if( !($resultcompetition = pg_query($vConnect, $requestcompetition)) ) {
 			echo pg_last_error() ;
 			exit();
 		}
@@ -21,10 +21,10 @@
 	?>
 	</select>
 		
-	<label for="club">Club :</label>
-	<select name="club" required>
-	<?php while($club = pg_fetch_array($resultclub))
-		echo "<option value='$club[name]'>$club[name]</option>";
+	<label for="competition">Compétition :</label>
+	<select name="competition" required>
+	<?php while($competition = pg_fetch_array($resultcompetition))
+		echo "<option value='$competition[id]'>$competition[name]</option>";
 	?>
 	</select>
 		
