@@ -78,8 +78,8 @@ CREATE TABLE COMPETITION(
 	Date DATE NOT NULL,
 	Place VARCHAR UNIQUE,
 	Type VARCHAR,
-CHECK(Type = 'kumite' OR Type = 'tamashi wari' OR Type = 'kata' OR Type = 'mixte'),
-Organisator VARCHAR REFERENCES CLUB(Name) NOT NULL
+	CHECK(Type = 'kumite' OR Type = 'tamashi wari' OR Type = 'kata' OR Type = 'mixte'),
+	Organisator VARCHAR REFERENCES CLUB(Name) NOT NULL
 );
 
 CREATE TABLE PARTICIPATE(
@@ -90,7 +90,6 @@ CREATE TABLE PARTICIPATE(
 	FOREIGN KEY (Competition) REFERENCES Competition(Id)
 );
 
-
 CREATE TABLE KATAFAMILY(
 	NameJ VARCHAR PRIMARY KEY,
 	NameFR VARCHAR UNIQUE
@@ -98,13 +97,13 @@ CREATE TABLE KATAFAMILY(
 
 CREATE TABLE KATA(
 	NameJ VARCHAR PRIMARY KEY,
-NameFR VARCHAR,
-Description VARCHAR,
-NumberMov INTEGER,
-Belt VARCHAR,
-Dans INTEGER,
-Family VARCHAR REFERENCES KATAFAMILY(NameJ) NOT NULL,
-CHECK(Belt = 'white' OR Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt = 'brown' OR Belt = 'black')
+	NameFR VARCHAR,
+	Description VARCHAR,
+	NumberMov INTEGER,
+	Belt VARCHAR,
+	Dans INTEGER,
+	Family VARCHAR REFERENCES KATAFAMILY(NameJ) NOT NULL,
+	CHECK(Belt = 'white' OR Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt = 'brown' OR Belt = 'black')
 );
 
 

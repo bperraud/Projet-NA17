@@ -12,6 +12,8 @@
 * Gestion des clubs & compétitions
 	* Inscription des karatékas à un club
 	* Inscription des karatékas à une compétition
+* Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible -> pas forcément, on risque d'en avoir besoin assez rapidement...)
+	* Création du fichier avec tous les katas depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 
 ## En cours
 
