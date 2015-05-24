@@ -17,12 +17,12 @@
 
 * Gestion des résultats de confrontations (Marie)
 	* création de confrontations
+* Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible -> pas forcément, on risque d'en avoir besoin assez rapidement...) (Baptiste)
+	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
+	* Page PHP correspondante
 
 ## Todos non assignés
 
-* Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible -> pas forcément, on risque d'en avoir besoin assez rapidement...)
-	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
-	* Page PHP correspondante
 * Saisir le résultat des confrontations au fur et à mesure
 * Affichage des scores associés à une compétition
 	* affichage brut
