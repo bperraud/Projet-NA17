@@ -103,6 +103,7 @@ CREATE TABLE KATA(
 	Belt VARCHAR,
 	Dans INTEGER,
 	Family VARCHAR REFERENCES KATAFAMILY(NameJ) NOT NULL,
+	schema_url VARCHAR,
 	CHECK(Belt = 'white' OR Belt = 'yellow' OR Belt = 'orange' OR Belt = 'green' OR Belt = 'blue' OR Belt = 'brown' OR Belt = 'black')
 );
 

@@ -1,27 +1,27 @@
-namej;namefr;description;numbermov;belt;dans;family
-heian shodan;paix et tranquillité, niveau 1;premier kata de la famille Heian;21;white;;heian
-heian nidan;paix et tranquillité, niveau 2;deuxième kata de la famille Heian;26;yellow;;heian
-heian sandan;paix et tranquillité, niveau 3;troisième kata de la famille Heian;21;orange;;heian
-heian yodan;paix et tranquillité, niveau 4;quatrième kata de la famille Heian;25;green;;heian
-heian godan;paix et tranquillité, niveau 5;cinquième kata de la famille Heian;22;blue;;heian
-tekki shodan;cavalier de fer, niveau 1;premier kata de la famille Tekki;18;brown;;tekki
-tekki nidan;cavalier de fer, niveau 2;deuxième kata de la famille Tekki;20;black;3;tekki
-tekki sandan;cavalier de fer, niveau 3;troisième kata de la famille Tekki;21;black;4;tekki
-bassai dai;pénétrer la forteresse, long;kata Bassai, version longue;39;black;2;bassai
-bassai sho;pénétrer la forteresse, court;kata Bassai, version courte;28;black;3;bassai
-kanku dai;regarder le ciel, long;kata Kanku, version longue;58;black;2;kanku
-kanku sho;regarder le ciel, court;kata Kanku, version courte;46;black;3;kanku
-empi;vol de l'hirondelle;nombreux changements de positions haute-basse tel le vol d'une hirondelle;36;black;2;empi
-jion;miséricorde;long et puissant;44;black;2;jion
-jitte;10 mains;combat contre 10 personnes;26;black;3;jion
-jiin;amour du boudha;changements rapides de direction;32;black;4;jion
-gankaku;grue sur un rocher;très dynamique, position de la grue;41;black;3;gankaku
-hangetsu;demi-lune;kata respiratoire;35;black;2;hangetsu
-chinte;main secrète;kata ancien aux nombreuses techniques circulaires;34;black;5;chinte
-sochin;force tranquille;rythme dynamique;35;black;4;sochin
-meikyo;polir le miroir;défenses contre un bâton;33;black;5;meikyo
-gojushiho dai;54 pas, mouvements amples;kata Gojushiho, mouvements amples;54;black;5;gojushiho
-gojushiho sho;54 pas, mouvements moins amples;kata Gojushiho, mouvements moins amples;54;black;5;gojushiho
-nijushiho;24 pas;capter l'attaque et supprimer l'attaquant dans le même mouvement;33;black;4;nijushiho
-wankan;couronne du roi;plus petit kata shotokan;16;black;5;wankan
-unsu;main en nuage;kata très spectaculaire visuellement;46;black;4;unsu
+namej;namefr;description;numbermov;belt;dans;family;schema_url
+heian shodan;paix et tranquillité, niveau 1;premier kata de la famille Heian;21;white;;heian;http://americasfinestshotokan.com/kata/HeianShodan.jpg
+heian nidan;paix et tranquillité, niveau 2;deuxième kata de la famille Heian;26;yellow;;heian;http://americasfinestshotokan.com/kata/HeianNidan.jpg
+heian sandan;paix et tranquillité, niveau 3;troisième kata de la famille Heian;21;orange;;heian;http://americasfinestshotokan.com/kata/HeianSandan.jpg
+heian yodan;paix et tranquillité, niveau 4;quatrième kata de la famille Heian;25;green;;heian;http://americasfinestshotokan.com/kata/HeianYondan.jpg
+heian godan;paix et tranquillité, niveau 5;cinquième kata de la famille Heian;22;blue;;heian;http://americasfinestshotokan.com/kata/HeianGodan.jpg
+tekki shodan;cavalier de fer, niveau 1;premier kata de la famille Tekki;18;brown;;tekki;http://americasfinestshotokan.com/kata/TekkiShodan.jpg
+tekki nidan;cavalier de fer, niveau 2;deuxième kata de la famille Tekki;20;black;3;tekki;http://americasfinestshotokan.com/kata/TekkiNidan.jpg
+tekki sandan;cavalier de fer, niveau 3;troisième kata de la famille Tekki;21;black;4;tekki;http://americasfinestshotokan.com/kata/TekkiSandan.jpg
+bassai dai;pénétrer la forteresse, long;kata Bassai, version longue;39;black;2;bassai;http://americasfinestshotokan.com/kata/BassaiDai.jpg
+bassai sho;pénétrer la forteresse, court;kata Bassai, version courte;28;black;3;bassai;http://americasfinestshotokan.com/kata/BassaiSho.jpg
+kanku dai;regarder le ciel, long;kata Kanku, version longue;58;black;2;kanku;http://americasfinestshotokan.com/kata/KankuDai.jpg
+kanku sho;regarder le ciel, court;kata Kanku, version courte;46;black;3;kanku;http://americasfinestshotokan.com/kata/KankuSho.jpg
+empi;vol de l'hirondelle;nombreux changements de positions haute-basse tel le vol d'une hirondelle;36;black;2;empi;http://americasfinestshotokan.com/kata/Empi.jpg
+jion;miséricorde;long et puissant;44;black;2;jion;http://americasfinestshotokan.com/kata/Jion.jpg
+jitte;10 mains;combat contre 10 personnes;26;black;3;jion;http://americasfinestshotokan.com/kata/Jitte.jpg
+jiin;amour du boudha;changements rapides de direction;32;black;4;jion;http://americasfinestshotokan.com/kata/Jiin.jpg
+gankaku;grue sur un rocher;très dynamique, position de la grue;41;black;3;gankaku;http://americasfinestshotokan.com/kata/Gangaku.jpg
+hangetsu;demi-lune;kata respiratoire;35;black;2;hangetsu;http://americasfinestshotokan.com/kata/Hangetsu.jpg
+chinte;main secrète;kata ancien aux nombreuses techniques circulaires;34;black;5;chinte;http://americasfinestshotokan.com/kata/Chinte.jpg
+sochin;force tranquille;rythme dynamique;35;black;4;sochin;http://americasfinestshotokan.com/kata/Sochin.jpg
+meikyo;polir le miroir;défenses contre un bâton;33;black;5;meikyo;http://americasfinestshotokan.com/kata/Meikyo.jpg
+gojushiho dai;54 pas, mouvements amples;kata Gojushiho, mouvements amples;54;black;5;gojushiho;http://americasfinestshotokan.com/kata/GojushihoDai.jpg
+gojushiho sho;54 pas, mouvements moins amples;kata Gojushiho, mouvements moins amples;54;black;5;gojushiho;http://americasfinestshotokan.com/kata/GojushihoSho.jpg
+nijushiho;24 pas;capter l'attaque et supprimer l'attaquant dans le même mouvement;33;black;4;nijushiho;http://americasfinestshotokan.com/kata/Nijushiho.jpg
+wankan;couronne du roi;plus petit kata shotokan;16;black;5;wankan;http://americasfinestshotokan.com/kata/Wankan.jpg
+unsu;main en nuage;kata très spectaculaire visuellement;46;black;4;unsu;http://americasfinestshotokan.com/kata/Unsu.jpg
