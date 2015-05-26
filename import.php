@@ -44,11 +44,16 @@ else{
 		//Ajout dans la BDD
 		$vConnect = Connect();
 		$fullpath = str_replace('\\', '/', getcwd()).'/'.$emplacement;
-		$request = "COPY katafamily FROM '$fullpath' HEADER DELIMITER ';' CSV;";
+
+		$request = "COPY katafamily FROM stdin HEADER DELIMITER ';' CSV;";
 		if(!($result = pg_query($vConnect, $request))){
 			echo pg_last_error();
 			exit();
 		}
+		foreach (file($fullpath) as $line) {
+			pg_put_line($vConnect, $line);
+		}
+		pg_end_copy($vConnect);
 		pg_close($vConnect);
 	}
 	else{
@@ -91,11 +96,15 @@ else{
 		//Ajout dans la BDD
 		$vConnect = Connect();
 		$fullpath = str_replace('\\', '/', getcwd()).'/'.$emplacement;
-		$request = "COPY kata FROM '$fullpath' HEADER DELIMITER ';' CSV;";
+		$request = "COPY kata FROM stdin HEADER DELIMITER ';' CSV;";
 		if(!($result = pg_query($vConnect, $request))){
 			echo pg_last_error();
 			exit();
 		}
+		foreach (file($fullpath) as $line) {
+			pg_put_line($vConnect, $line);
+		}
+		pg_end_copy($vConnect);
 		pg_close($vConnect);
 	}
 	else{

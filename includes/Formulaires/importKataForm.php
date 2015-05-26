@@ -6,7 +6,7 @@
 	<label for="kata">Importer la liste des katas depuis un fichier csv :</label><br />
 	<input type="file" name="kata" required /><br />
 		
-	<?php pg_close($vConnect); ?>
+	<!-- <?php pg_close($vConnect); ?> -->
 		
 	<input type="submit" value="Envoyer" />
 		
