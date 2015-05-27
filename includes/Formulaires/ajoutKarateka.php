@@ -12,6 +12,9 @@
 			<label for="is_karateka">Karatéka ?</label>
 			<input type="checkbox" name="is_karateka" id="is_karateka" />
 
+			<label for="is_teacher">Professeur ?</label>
+			<input type="checkbox" name="is_teacher" id="is_teacher">
+			
 			<label for="photo">Photo *:</label>
 			<input type="file" name="photo" id="photo" />
 
@@ -39,9 +42,9 @@
 			<label for="is_dirigeant">Dirigeant ?</label>
 			<input type="checkbox" name="is_dirigeant" id="id_dirigeant" />
 
-			<label for="email"></label>
+			<label for="email">Email :</label>
 			<input type="email" name="email" id="email">
-			<label for="tel"></label>
+			<label for="tel">Téléphone :</label>
 			<input type="tel" name="tel" id="tel">
 		</fieldset>
 

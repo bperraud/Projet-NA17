@@ -99,6 +99,11 @@ if(!isset($_POST['nom']) && !isset($_POST['prenom'])){
 				'belt' => $_POST['ceinture'],
 				'dans' => $_POST['dans']
 			] ;
+			if(isset($_POST['is_teacher'])){
+				$array['teacher'] = true;
+			} else {
+				$array['teacher'] = false;
+			}
 			if ( !pg_insert( $vConnect, 'karateka', $array) ) {
 				echo pg_last_error();
 				exit();

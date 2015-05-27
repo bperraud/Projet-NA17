@@ -11,3 +11,7 @@ function verifier_arguments($array){
 	}
 	return $erreur;
 }
+
+function inserer_header($title) {
+	include '/includes/header.php';
+}
