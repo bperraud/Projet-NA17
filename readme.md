@@ -2,6 +2,8 @@
 
 ## Notes & co
 
+* Import XML à squeezer (complexe, et on permet déjà l'import en csv)
+
 ## Done
 
 * Création des Tables SQL
@@ -15,19 +17,18 @@
 * Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible -> pas forcément, on risque d'en avoir besoin assez rapidement...)
 	* Création du fichier avec tous les katas depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 	* Page PHP correspondante
+* Fonction d'import des mouvements depuis un fichier CSV ou XML
+	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
+	* Page PHP correspondante (même page que pour les katas)
 
 ## En cours
 
 * Gestion des résultats de confrontations (Marie)
 	* création de confrontations
-* Fonction d'import des mouvements depuis un fichier CSV ou XML (Baptiste)
-	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
-	* Page PHP correspondante
+* Saisir le résultat des confrontations au fur et à mesure (Baptiste)
 
 ## Todos non assignés
 
-
-* Saisir le résultat des confrontations au fur et à mesure
 * Affichage des scores associés à une compétition
 	* affichage brut
 	* classement selon critères (karatéka, club...)
