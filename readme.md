@@ -25,10 +25,12 @@
 
 * Gestion des résultats de confrontations (Marie)
 	* création de confrontations
-* Saisir le résultat des confrontations au fur et à mesure (Baptiste)
+* Différents affichages (Baptiste)
+	* Affichage du profil d'un karatéka
 
 ## Todos non assignés
 
+* Saisir le résultat des confrontations au fur et à mesure
 * Affichage des scores associés à une compétition
 	* affichage brut
 	* classement selon critères (karatéka, club...)
