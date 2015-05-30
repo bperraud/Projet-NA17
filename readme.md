@@ -21,12 +21,15 @@
 	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 	* Page PHP correspondante (même page que pour les katas)
 
+## Done temporaire (fonctionnel mais à compléter)
+* Différents affichages
+	* Affichage du profil d'un karatéka
+
+	
 ## En cours
 
 * Gestion des résultats de confrontations (Marie)
 	* création de confrontations
-* Différents affichages (Baptiste)
-	* Affichage du profil d'un karatéka
 
 ## Todos non assignés
 
