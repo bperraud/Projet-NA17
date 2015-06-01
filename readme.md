@@ -14,6 +14,8 @@
 * Gestion des clubs & compétitions
 	* Inscription des karatékas à un club
 	* Inscription des karatékas à une compétition
+* Gestion des confrontations
+	* création de confrontations + entrée des résultats
 * Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible -> pas forcément, on risque d'en avoir besoin assez rapidement...)
 	* Création du fichier avec tous les katas depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 	* Page PHP correspondante
@@ -28,12 +30,16 @@
 	
 ## En cours
 
-* Gestion des résultats de confrontations (Marie)
-	* création de confrontations
+* Gestion des confrontations (Marie)
+	* modification du formulaire : seuls les karatékas inscrits à la compétition doivent pouvoir participer à la confrontation
+
 
 ## Todos non assignés
 
-* Saisir le résultat des confrontations au fur et à mesure
+* Ajout de photo de compétition
+* Gestion des confrontations
+	* Ajout des règles de points selon la catégorie de coup
+	* Gérer les coups (table hitdone)
 * Affichage des scores associés à une compétition
 	* affichage brut
 	* classement selon critères (karatéka, club...)
