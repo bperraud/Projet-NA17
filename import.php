@@ -1,4 +1,5 @@
 <?php
+// éventuellement : factoriser le code pour katafamily, kata et kata mov.
 
 $title = "Importer un fichier csv" ;
 include 'includes/header.php' ;

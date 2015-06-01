@@ -12,6 +12,26 @@ function verifier_arguments($array){
 	return $erreur;
 }
 
+/**
+ * retourne NULL s'il n'y a aucun doublons, 1 sinon
+ */
+function verifier_doublons($array){
+	$taille = count($array);
+	$i = 0;
+	$j = 0;
+
+	for ($i=0; $i < $taille - 1 ; $i++) { 
+		for ($j=$i + 1 ; $j < $taille ; $j++) { 
+			if ($array[$i] == $array[$j]) {
+				return 1;
+			}
+		}
+	}
+
+	return NULL;
+}
+
+
 function inserer_header($title) {
-	include '/includes/header.php';
+	include 'header.php';
 }
