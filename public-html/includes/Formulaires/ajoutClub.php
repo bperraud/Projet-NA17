@@ -1,3 +1,10 @@
+
+	 
+	 <section class="bg-default" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">	
+
 <form method = "POST" action="ajoutClub.php">
 	<label for="name">Nom * :</label>
 	<input type="text" name="name" id="name" required>
@@ -33,5 +40,5 @@
 		?>
 		</select>
 
-	<input type="submit" value="Envoyer" />
-</form>
+	<input type="submit" class="btn btn-lg btn-primary" value="Envoyer" />
+</form>	</div></div></div></section>

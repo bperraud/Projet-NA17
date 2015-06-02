@@ -8,13 +8,10 @@
 <?php
 	include 'includes/header.php';
 ?>
-
-
-
-    <header>
+ <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 class="text-muted">HOME OF KARATE</h1>
+                <h1 class="text-default">HOME OF KARATE</h1>
                 <hr>
             </div>
         </div>

@@ -1,7 +1,3 @@
-	    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
 	<form enctype="multipart/form-data" method="POST" action="ajoutPersonne.php">
 		<fieldset>
 			<legend>Information Générales</legend>
@@ -54,7 +50,3 @@
 
 		<input type="submit" value="Envoyer" />
 	</form>
-                </div>
-            </div>
-        </div>
-    </section>

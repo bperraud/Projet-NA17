@@ -6,6 +6,8 @@
 
 $title = "Ajout d'une Personne" ;
 include 'includes/header.php' ;
+include 'includes/fonctions.php';
+include 'connect.php';
 
 if(!isset($_POST['nom']) && !isset($_POST['prenom'])){
 	include 'includes/Formulaires/ajoutKarateka.php';

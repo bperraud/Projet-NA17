@@ -3,6 +3,10 @@
  * contact competition ?
  */
 ?>
+	 <section class="bg-default" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">	
 <form action="ajoutCompetition.php" method="post">
 	<fieldset>
 		<legend>Informations Générales</legend>
@@ -52,4 +56,4 @@
 	</fieldset> -->
 
 	<input type="submit" value="Envoyer" />
-</form>
+</form></div></div></div></section>

@@ -24,6 +24,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +35,8 @@
     <![endif]-->
 
 </head>
+<?php 
+?>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -66,21 +70,29 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Karateka<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="viewKarateka.php">List</a>
+								<li><a href="viewKaratekaAll.php">List</a>
 								</li>
 								<li class="divider"></li>
 								<li><a href="ajoutPersonne.php">Create</a>
 								</li>
 							</ul>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="">Club</a>
+                    <li class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Club<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="ajoutClub.php">Create</a>
+								</li>
+							</ul>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="">Competition</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href=""></a>
+               <li class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Competition<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">List</a>
+								</li>
+																<li class="divider"></li>
+								<li><a href="ajoutCompetition.php">Create</a>
+								</li>
+							</ul>
                     </li>
                 </ul>
             </div>
@@ -88,3 +100,5 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+	
+	
