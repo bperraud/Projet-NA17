@@ -1,12 +1,13 @@
 <?php
 
 $title = "Ajout d'une Maitrise" ;
-include 'includes/header.php' ;
+include 'connect.php' ;
 
 if(empty($_POST)) {
-	include 'includes/Formulaires/ajoutMaitrisesForm.php';
-} else {
-	if( ($erreur = verifier_arguments(['karateka', 'kata'])) == NULL) {
+
+include 'includes/header.php' ;
+} else {?>
+<meta HTTP-EQUIV="Refresh" content="0;URL=viewKarateka.php?id=<?php echo $_POST['karateka']; ?>"/><?php
 		echo "ajout d'une maitrise... ";
 		$vConnect = Connect();
 
@@ -22,8 +23,5 @@ if(empty($_POST)) {
 		}
 		echo "ok ! <br />";
 		pg_close($vConnect);
-	} else {
-		echo $erreur;
-		exit();
-	}
+
 }

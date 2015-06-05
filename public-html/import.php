@@ -1,7 +1,7 @@
 <?php
 
 $title = "Importer un fichier csv" ;
-include 'includes/header.php' ;
+include 'connect.php';
 
 if (strtolower($_SERVER['REQUEST_METHOD']) != 'post'){
 	include 'includes/Formulaires/importKataForm.php';

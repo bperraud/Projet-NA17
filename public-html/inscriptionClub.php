@@ -1,12 +1,13 @@
 <?php
-
 $title = "Inscription d'un karatéka à un club" ;
-include 'includes/header.php' ;
 
-if(empty($_POST))
-	include 'includes/Formulaires/inscriptionClubForm.php';
+include 'connect.php' ;
+if(empty($_POST)){
+include 'includes/header.php' ;
+	include 'includes/Formulaires/inscriptionClubForm.php';}
 
 else{
+?><meta HTTP-EQUIV="Refresh" content="0;URL=viewKarateka.php?id=<?php echo $_POST['karateka']; ?>"/><?php
 	if (empty($_POST['karateka'])){
 		echo "karateka non fourni...";
 		exit();
@@ -26,4 +27,5 @@ else{
 	}
 	echo "ok ! <br />";
 	pg_close($vConnect);
+	header('Location : index.php');
 }

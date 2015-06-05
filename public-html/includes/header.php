@@ -87,7 +87,7 @@
                <li class="dropdown">
                                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Competition<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="">List</a>
+								<li><a href="viewCompetitionAll.php">List</a>
 								</li>
 																<li class="divider"></li>
 								<li><a href="ajoutCompetition.php">Create</a>

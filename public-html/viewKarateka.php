@@ -37,14 +37,15 @@ if(isset($_GET['id'])){
 		default:
 			echo "couleur ceinture invalide !"; exit();
 	}
-	 if($resultkarateka['teacher'] ==true)
-{$teacher=true;}else{$teacher=false;}	 
+	 if($resultkarateka['teacher'] == 'f')
+{$teacher=false;}else{$teacher=true;}	 
 	
 ?>
 	 <section class="bg-default image" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">	
+				
 	<h1>Identité :</h1>
 	
 	<img src="<?php echo $resultkarateka['urlphoto']; ?>" alt="photo karatéka" height="128" width="128">
@@ -59,11 +60,27 @@ if(isset($_GET['id'])){
 		<td><?php if($belt == "Noire"){ echo $resultkarateka['dans']; } ?></td>
 		
 		<td><?php echo $resultkarateka['clubname']; 	?></td>
-		<td><?php if($teacher)echo "oui"; 					?></td></tr>
+		<td><?php if($teacher){echo "oui";}else {echo "non";} 					?></td></tr>
 	</table></div>
+	<?php if($resultkarateka['clubname'] == NULL){?>
 	
+<form method = "POST" action="inscriptionClub.php">
+	<label for="club">Ajout Club</label><select name="club" id="club">
+		<?php
+		$request = pg_query('SELECT *
+							FROM CLUB ');
+		if(!$request){
+			echo "Erreur select" . pg_last_error() ;
+			exit();
+		}
+		while( $club = pg_fetch_array($request,null,PGSQL_ASSOC) ){
+			echo '<option value="'.$club['name'].'">'.$club['name'].'</option>';
+		}
+		?>
+		</select>
+		<input type = 'number' name = 'karateka' value="<?php echo $resultkarateka['id']; ?>" style="display:none"">
+	<input type="submit" class="btn btn-lg btn-primary" value="Envoyer" /></form><?php }?>
 <?php
-
 	$request = "SELECT * FROM competition c INNER JOIN participate p ON c.id = p.competition WHERE idk = $id;";
 	if ( !($result = pg_query($vConnect, $request)) ) {
 		echo pg_last_error() ;
@@ -113,6 +130,9 @@ if(isset($_GET['id'])){
 			echo "<tr><td>Aucun kata maîtrisé.</td></tr>";
 	?>
 	</table></div>
+	
+<?php
+	include 'includes/Formulaires/ajoutMaitrisesForm.php';?>
 	</div></div></div></section>
 	
 	

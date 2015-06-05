@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * Empêcher création de deux mec du même nom
@@ -115,4 +117,4 @@ if(!isset($_POST['nom']) && !isset($_POST['prenom'])){
 		pg_close($vConnect);
 	}
 
-}
+}?>
