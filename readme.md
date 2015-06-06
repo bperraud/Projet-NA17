@@ -32,11 +32,12 @@
 
 * Gestion des confrontations (Marie)
 	* modification du formulaire : seuls les karatékas inscrits à la compétition doivent pouvoir participer à la confrontation
+* Ajout de photo de compétition (Baptiste)
 
 
 ## Todos non assignés
 
-* Ajout de photo de compétition
+
 * Gestion des confrontations
 	* Ajout des règles de points selon la catégorie de coup
 	* Gérer les coups (table hitdone)

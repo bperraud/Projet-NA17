@@ -35,6 +35,7 @@
 </div><div class="form-group">
 			<label for="ceinture">Ceinture *:</label>
 			<select name="ceinture" class="form-control" id="ceinture">
+				<option value="white">Blanche</option>
 				<option value="yellow">Jaune</option>
 				<option value="orange">Orange</option>
 				<option value="green">Verte</option>
