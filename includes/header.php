@@ -23,6 +23,9 @@
 				<li><a href="ajoutClub.php">Ajouter un club</a></li>
 				<li><a href="ajoutCompetition.php">Ajouter une compétition</a></li>
 				<br />
+				<li><a href="ajoutPhotoCompet.php">Ajouter des photos à une compétition</a></li>
+				<li><a href="viewPhotoCompet.php">Voir les photos d'une compétition</a></li>
+				<br />
 				<li><a href="viewKarateka.php">Accéder à la description d'un karatéka</a></li>
 				<br />
 				<li><a href="inscriptionClub.php">Inscrire un karatéka à un club</a></li>

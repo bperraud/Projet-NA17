@@ -22,7 +22,11 @@
 * Fonction d'import des mouvements depuis un fichier CSV ou XML
 	* Création du fichier avec tous les mouvements depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 	* Page PHP correspondante (même page que pour les katas)
-
+* Photos de compétition
+	* Ajout
+	* View
+	
+	
 ## Done temporaire (fonctionnel mais à compléter)
 * Différents affichages
 	* Affichage du profil d'un karatéka
@@ -32,7 +36,7 @@
 
 * Gestion des confrontations (Marie)
 	* modification du formulaire : seuls les karatékas inscrits à la compétition doivent pouvoir participer à la confrontation
-* Ajout de photo de compétition (Baptiste)
+
 
 
 ## Todos non assignés
