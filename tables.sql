@@ -76,9 +76,11 @@ CREATE TABLE COMPETITION(
 	Id SERIAL PRIMARY KEY,
 	Name VARCHAR UNIQUE,
 	Date DATE NOT NULL,
+	statut VARCHAR NOT NULL,
 	Place VARCHAR UNIQUE,
 	Type VARCHAR,
 	CHECK(Type = 'kumite' OR Type = 'tamashi wari' OR Type = 'kata' OR Type = 'mixte'),
+	CHECK(statut = 'en cours de création' OR statut = 'en cours/quart' OR statut = 'en cours/demi' OR statut = 'terminé' OR statut = 'en cours/final'),
 	Organisator VARCHAR REFERENCES CLUB(Name) NOT NULL
 );
 
@@ -144,14 +146,11 @@ CREATE TABLE KATAMOV(
 	PRIMARY KEY(Kata, Number)
 );
 
-CREATE TABLE HIT(
-	Name VARCHAR PRIMARY KEY,
-	Category INTEGER REFERENCES CATEGORY(Id)
-);
-
 CREATE TABLE CONFRONTATION(
 	Id SERIAL PRIMARY KEY,
 	Competition INTEGER REFERENCES COMPETITION(Id) NOT NULL
+	statut VARCHAR NOT NULL,
+	CHECK(statut = 'en cours' OR statut = 'fin' )
 );
 
 CREATE TABLE CONFRONTATIONKUMITE(
@@ -167,10 +166,9 @@ CREATE TABLE CONFRONTATIONKATA(
 );
 
 CREATE TABLE HITDONE(
-	Hit VARCHAR REFERENCES HIT,
-	Confrontation INTEGER REFERENCES CONFRONTATIONKUMITE(Confrontation),
+	Hit VARCHAR REFERENCES category(id),
+	Confrontation INTEGER REFERENCES confrontation(id),
 	Karateka INTEGER REFERENCES KARATEKA(Id),
-	PRIMARY KEY(Hit, Confrontation, Karateka)
 );
 
 CREATE TABLE RULE(

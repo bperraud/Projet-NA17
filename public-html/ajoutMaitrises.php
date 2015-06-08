@@ -7,6 +7,7 @@ if(empty($_POST)) {
 
 include 'includes/header.php' ;
 } else {?>
+
 <meta HTTP-EQUIV="Refresh" content="0;URL=viewKarateka.php?id=<?php echo $_POST['karateka']; ?>"/><?php
 		echo "ajout d'une maitrise... ";
 		$vConnect = Connect();

@@ -44,6 +44,7 @@
 		pg_close($vConnect);
 		?>
 		</select>
+		<input type="text" name="statut" value="en cours de création" style="display : none">
 	</fieldset>
 	<!--
 	Braou ?

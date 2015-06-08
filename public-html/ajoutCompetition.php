@@ -14,7 +14,6 @@ if(!isset($_POST['organisator']) ){
 	include 'includes/Formulaires/ajoutCompetition.php';
 	
 } else {
-
 	//print_r($_POST);
 	$erreur = verifier_arguments('name','date','place','type','organisator');
 	$display = true;

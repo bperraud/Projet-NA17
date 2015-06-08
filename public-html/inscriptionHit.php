@@ -9,31 +9,23 @@ else{
 echo $_POST['competition'];
 ?>
 <meta HTTP-EQUIV="Refresh" content="0;URL=viewCompetition.php?id=<?php echo $_POST['competition']; ?>"/><?php
-	if (empty($_POST['karateka'])){
+	if (empty($_POST['category'])){
 		echo "karateka non fourni...";
 		exit();
 	}
-	if (empty($_POST['competition'])){
+	if (empty($_POST['points'])){
 		echo "competition non fournie...";
 		exit();
 	}
-	$karateka = $_POST['karateka'];
+	$category = $_POST['category'];
+	$points = $_POST['points'];
 	$competition = $_POST['competition'];
 	
 	$vConnect = Connect();
 	
-	$request = "SELECT * FROM participate WHERE idk = $karateka AND competition = $competition;";
-	if( !($result = pg_query($vConnect, $request)) ) {
-		echo pg_last_error() ;
-		exit();
-	}
-	if(pg_fetch_array($result)){
-		echo "Erreur, karatéka déjà inscrit à cette compétition !";
-		exit();
-	}
 	
 	echo "inscription d'un karatéka...";
-	$request = "INSERT INTO participate (idk, competition) VALUES ($karateka, $competition);";
+	$request = "INSERT INTO rule (competition,category,points) VALUES ($competition, $category,$points);";
 	if( !($result = pg_query($vConnect, $request)) ) {
 		echo pg_last_error() ;
 		exit();

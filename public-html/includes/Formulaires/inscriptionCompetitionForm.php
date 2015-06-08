@@ -3,32 +3,31 @@
 	<?php
 		$vConnect = Connect();
 		$requestkarateka = "SELECT id, firstname, lastname FROM person NATURAL JOIN karateka;";
-		$requestcompetition = "SELECT id, name FROM competition;";
+		$requestInscrit = "SELECT k.id FROM vkarateka k, participate p  WHERE p.idk = k.id AND p.competition = $resultcompetition[id];";
 		if( !($resultkarateka = pg_query($vConnect, $requestkarateka)) ) {
 			echo pg_last_error() ;
 			exit();
-		}
-		if( !($resultcompetition = pg_query($vConnect, $requestcompetition)) ) {
+		}	
+		if( !($resultinscrit = pg_query($vConnect, $requestInscrit)) ) {
 			echo pg_last_error() ;
 			exit();
 		}
+		
+		$inscrits = array();
+		while($inscrit = pg_fetch_array($resultinscrit))
+		{
+			array_push($inscrits,$inscrit['id']);
+		}
 	?>
 		
-	<label for="karateka">Karateka :</label>
+	<label for="karateka">Inscription Karateka</label>
 	<select name="karateka" required>
 	<?php while($karateka = pg_fetch_array($resultkarateka))
-		echo "<option value='$karateka[id]'>$karateka[firstname] $karateka[lastname]</option>";
+		if(!in_array($karateka[id],$inscrits)){
+		echo "<option value='$karateka[id]'>$karateka[firstname] $karateka[lastname]</option>";}
 	?>
 	</select>
-		
-	<label for="competition">Compétition :</label>
-	<select name="competition" required>
-	<?php while($competition = pg_fetch_array($resultcompetition))
-		echo "<option value='$competition[id]'>$competition[name]</option>";
-	?>
-	</select>
-		
-	<?php pg_close($vConnect); ?>
+	<input type="number" style="display:none" name="competition" value="<?php echo $resultcompetition['id'];?>"></select>
 		
 	<input type="submit" value="Envoyer" />
 		
