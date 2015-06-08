@@ -3,29 +3,17 @@
 	<?php
 		$vConnect = Connect();
 
-		$requestkarateka = "SELECT id, firstname, lastname FROM vkarateka;";
+		$requestkarateka = "SELECT id, firstname, lastname FROM vkarateka k
+							JOIN participate p ON k.id = p.idk
+							WHERE p.competition = '$competition' ;";
 		if( !($resultkarateka = pg_query($vConnect, $requestkarateka)) ) {
 			echo pg_last_error() ;
 			exit();
 		}
 		$size = pg_num_rows($resultkarateka);
 
-		$requestcompetition = "SELECT id, name FROM competition
-							   WHERE type = '$type' OR type = 'mixte';";
-		if( !($resultcompetition = pg_query($vConnect, $requestcompetition)) ) {
-			echo pg_last_error() ;
-			exit();
-		}
-	?>
-	<label for="competition">Compétition :</label>
-	<select name="competition" required>
-	<?php while($competition = pg_fetch_array($resultcompetition))
-		echo "<option value='$competition[id]'>$competition[name] </option>";
-	?>
-	</select> <br />
-	<?php
 		//pour garder en mémoire nbr_karateka & le type
-
+		echo '<input type="hidden" value="'.$competition.'" name="competition">';		
 		echo '<input type="hidden" value="'.$nbr_karateka.'" name="nbr_karateka">';
 		echo '<input type="hidden" value="'.$type.'" name="type">';
 		//affiche le nombre 

@@ -17,8 +17,27 @@ if ( !isset($_GET['type']) && empty($_POST)) {
 	} else {
 		$nbr_karateka = $_GET['nbr_karateka'];
 	}
-	include 'includes/Formulaires/creerConfrontationForm.php';
+	include 'includes/Formulaires/creerConfrontationForm_selection_competition.php';
 
+} elseif ( isset($_POST['competition_selection']) ) {
+	$nbr_karateka = $_POST['nbr_karateka'];
+	switch ($_POST['type'] ) {
+	case 'kumite' :
+		$type = 'kumite';
+	break;
+	case 'tamashi wari' :
+		$type = 'tw';
+	break;
+	case 'kata' :
+		$type = 'kata' ;
+	break;
+	default :
+		echo "erreur : type incorrect";
+		exit();
+	break;
+	}
+	$competition = $_POST['competition_selection'];
+	include 'includes/Formulaires/creerConfrontationForm.php' ;
 } else {
 	//var_dump($_POST);
 

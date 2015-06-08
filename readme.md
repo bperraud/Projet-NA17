@@ -16,6 +16,7 @@
 	* Inscription des karatékas à une compétition
 * Gestion des confrontations
 	* création de confrontations + entrée des résultats
+	* modification du formulaire : seuls les karatékas inscrits à la compétition doivent pouvoir participer à la confrontation
 * Fonction d'import des Katas depuis un fichier CSV ou XML (à faire tout à la fin, priorité faible -> pas forcément, on risque d'en avoir besoin assez rapidement...)
 	* Création du fichier avec tous les katas depuis les références (cf http://nf17.crzt.fr/www/co/sujet6_stc.html)
 	* Page PHP correspondante
@@ -35,9 +36,8 @@
 ## En cours
 
 * Gestion des confrontations (Marie)
-	* modification du formulaire : seuls les karatékas inscrits à la compétition doivent pouvoir participer à la confrontation
-
-
+	* Ajout des règles de points selon la catégorie de coup
+	* Gérer les coups (table hitdone)
 
 ## Todos non assignés
 
