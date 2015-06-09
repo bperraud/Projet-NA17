@@ -1,5 +1,5 @@
-	<?php
-		include 'includes/header.php';
+<?php
+	include 'includes/header.php';
 	include 'connect.php';
 	include 'includes/fonctions.php';
 
@@ -20,7 +20,7 @@
 	<tr><th>#</th><th>Name</th><th>Last Name</th><th>Details</th></tr></thead><tbody>
 	<?php while($karateka = pg_fetch_array($resultkarateka)){
 	echo"<tr>";
-		echo"<td>$karateka[id]</td><td>$karateka[firstname]</td><td>$karateka[lastname]</td><td><a href='viewKarateka?id=$karateka[id]'>here</a></td>";
+		echo"<td>$karateka[id]</td><td>$karateka[firstname]</td><td>$karateka[lastname]</td><td><a href='viewKarateka.php?id=$karateka[id]'>here</a></td>";
 		echo "</tr>";
 		}
 	?>

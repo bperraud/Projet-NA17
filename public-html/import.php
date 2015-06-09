@@ -1,8 +1,16 @@
 <?php
 
 $title = "Importer un fichier csv" ;
-include 'connect.php';
-
+include 'includes/header.php' ;
+include 'connect.php' ;
+?>
+	 <section class="bg-default image" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">	
+				
+	<h1>Import de fichiers</h1>
+<?php
 if (strtolower($_SERVER['REQUEST_METHOD']) != 'post'){
 	include 'includes/Formulaires/importKataForm.php';
 	//include 'includes/Formulaires/importMovForm.php';
@@ -256,3 +264,5 @@ else{
 		exit();
 	}
 }
+?>
+</div></div></div></section>

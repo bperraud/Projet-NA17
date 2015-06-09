@@ -35,8 +35,6 @@
     <![endif]-->
 
 </head>
-<?php 
-?>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -85,7 +83,7 @@
 							</ul>
                     </li>
                <li class="dropdown">
-                                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Competition<span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Competition<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="viewCompetitionAll.php">List</a>
 								</li>
@@ -94,6 +92,18 @@
 								</li>
 							</ul>
                     </li>
+               <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" href="#">Rules &amp; Hit<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="import.php">Import CSV</a>
+                                </li>
+                                <!--                                <li class="divider"></li>
+                                <li><a href="ajoutCompetition.php">Create</a>
+                                </li>
+                                -->
+                            </ul>
+                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

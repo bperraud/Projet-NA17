@@ -30,7 +30,7 @@
 
 		
 	echo"<tr>";
-		echo"<td>$competition[id]</td><td>$competition[name]</td><td>$competition[place]</td><td>$competition[date]</td><td>$competition[type]</td><td>$competition[organisator]</td><td>$result[0] / 8</td><td>$competition[statut]</td><td><a href='viewCompetition?id=$competition[id]'>here</a></td>";
+		echo"<td>$competition[id]</td><td>$competition[name]</td><td>$competition[place]</td><td>$competition[date]</td><td>$competition[type]</td><td>$competition[organisator]</td><td>$result[0] / 8</td><td>$competition[statut]</td><td><a href='viewCompetition.php?id=$competition[id]'>here</a></td>";
 		echo "</tr>";
 	}?>
 		</tbody></table></div></div></div></div></section>
