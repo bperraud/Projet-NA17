@@ -166,8 +166,9 @@ CREATE TABLE CONFRONTATIONKATA(
 );
 
 CREATE TABLE HITDONE(
+	Id SERIAL PRIMARY KEY,
 	Hit VARCHAR REFERENCES category(id),
-	Confrontation INTEGER REFERENCES confrontation(id),
+	Confrontation INTEGER REFERENCES confrontationkumite(id),
 	Karateka INTEGER REFERENCES KARATEKA(Id),
 );
 
