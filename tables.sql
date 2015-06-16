@@ -148,8 +148,10 @@ CREATE TABLE KATAMOV(
 
 CREATE TABLE CONFRONTATION(
 	Id SERIAL PRIMARY KEY,
-	Competition INTEGER REFERENCES COMPETITION(Id) NOT NULL
+	Competition INTEGER REFERENCES COMPETITION(Id) NOT NULL,
+	round VARCHAR NOT NULL,
 	statut VARCHAR NOT NULL,
+	CHECK(round = 'quart' OR round = 'demi' OR round = 'final'),
 	CHECK(statut = 'en cours' OR statut = 'fin' )
 );
 
@@ -167,9 +169,9 @@ CREATE TABLE CONFRONTATIONKATA(
 
 CREATE TABLE HITDONE(
 	Id SERIAL PRIMARY KEY,
-	Hit VARCHAR REFERENCES category(id),
-	Confrontation INTEGER REFERENCES confrontationkumite(id),
-	Karateka INTEGER REFERENCES KARATEKA(Id),
+	Hit INTEGER REFERENCES category(id),
+	Confrontation INTEGER REFERENCES confrontationkumite(confrontation),
+	Karateka INTEGER REFERENCES KARATEKA(Id)
 );
 
 CREATE TABLE RULE(
