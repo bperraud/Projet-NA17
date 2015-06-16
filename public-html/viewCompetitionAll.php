@@ -14,7 +14,7 @@
 	 <section class="bg-default image" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 ">	<div class="table-responsive">
+                <div class="col-lg-10 col-lg-offset-2 ">	<div class="table-responsive">
 	<table class="table table-bordered">
 	<CAPTION>Liste des competitions</CAPTION>
 	<thead>
